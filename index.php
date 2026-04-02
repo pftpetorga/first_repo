@@ -98,6 +98,43 @@ $year = date('Y');
       transition: color 0.25s ease;
     }
 
+    .auth-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .auth-btn {
+      text-decoration: none;
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .signin-btn {
+      color: var(--primary-strong);
+      border: 1px solid rgba(15, 63, 101, 0.35);
+      background: #ffffff;
+    }
+
+    .signin-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(15, 63, 101, 0.12);
+    }
+
+    .signup-btn {
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--accent), #ad7a33);
+      box-shadow: 0 10px 22px rgba(173, 122, 51, 0.28);
+    }
+
+    .signup-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 13px 24px rgba(173, 122, 51, 0.34);
+    }
+
     .nav-links a:hover {
       color: var(--primary);
     }
@@ -333,6 +370,10 @@ $year = date('Y');
         <a href="#values">Values</a>
         <a href="#impact">Impact</a>
         <a class="cta-btn" href="#contact">Contact Us</a>
+        <div class="auth-links" aria-label="Authentication">
+          <a class="auth-btn signin-btn" href="#signin">Sign In</a>
+          <a class="auth-btn signup-btn" href="#signup">Sign Up</a>
+        </div>
       </nav>
     </div>
   </header>
@@ -407,3 +448,5 @@ $year = date('Y');
   </footer>
 </body>
 </html>
+
+
