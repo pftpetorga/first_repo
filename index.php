@@ -1,452 +1,413 @@
-﻿<?php
-$companyName = "Asterion Dynamics";
-$tagline = "Reliable systems for ambitious businesses.";
-$year = date('Y');
-?>
-<!DOCTYPE html>
-<html lang="en">
+﻿<!doctype html>
+<html lang="ms">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title><?php echo htmlspecialchars($companyName); ?> | Landing Page</title>
+  <title>FitMat Teh Herbal - Pelan 30 Hari Kempiskan Perut Buncit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Poppins', 'sans-serif'],
+            body: ['Inter', 'sans-serif']
+          },
+          colors: {
+            premiumGold: '#f5c26b'
+          },
+          boxShadow: {
+            soft: '0 20px 40px rgba(10, 14, 39, 0.25)'
+          }
+        }
+      }
+    };
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --bg: #f4f6f8;
-      --surface: #ffffff;
-      --surface-soft: #eef2f5;
-      --text: #17212b;
-      --muted: #55606c;
-      --primary: #1f5a86;
-      --primary-strong: #0f3f65;
-      --accent: #d1a15a;
-      --border: #dbe2e8;
-      --shadow: 0 20px 45px rgba(23, 33, 43, 0.12);
-      --radius: 20px;
-      --container: 1120px;
+    body { font-family: 'Inter', sans-serif; }
+    .glass {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
     }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: "Manrope", sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at 10% 5%, rgba(31, 90, 134, 0.08), transparent 35%),
-        radial-gradient(circle at 90% 0%, rgba(209, 161, 90, 0.12), transparent 30%),
-        var(--bg);
-      line-height: 1.6;
-    }
-
-    .wrap {
-      width: min(var(--container), 92vw);
-      margin: 0 auto;
-    }
-
-    header {
-      padding: 26px 0;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      backdrop-filter: blur(8px);
-      background: rgba(244, 246, 248, 0.85);
-      border-bottom: 1px solid rgba(219, 226, 232, 0.6);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .brand {
-      font-weight: 800;
-      letter-spacing: 0.4px;
-      font-size: 1.15rem;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .brand-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      box-shadow: 0 0 0 8px rgba(31, 90, 134, 0.12);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: var(--muted);
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: color 0.25s ease;
-    }
-
-    .auth-links {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .auth-btn {
-      text-decoration: none;
-      padding: 9px 16px;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .signin-btn {
-      color: var(--primary-strong);
-      border: 1px solid rgba(15, 63, 101, 0.35);
-      background: #ffffff;
-    }
-
-    .signin-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 8px 18px rgba(15, 63, 101, 0.12);
-    }
-
-    .signup-btn {
-      color: #ffffff;
-      background: linear-gradient(135deg, var(--accent), #ad7a33);
-      box-shadow: 0 10px 22px rgba(173, 122, 51, 0.28);
-    }
-
-    .signup-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 13px 24px rgba(173, 122, 51, 0.34);
-    }
-
-    .nav-links a:hover {
-      color: var(--primary);
-    }
-
-    .cta-btn {
-      text-decoration: none;
-      background: linear-gradient(135deg, var(--primary), var(--primary-strong));
-      color: #fff;
-      padding: 10px 18px;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 0.92rem;
-      box-shadow: 0 12px 26px rgba(15, 63, 101, 0.28);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .cta-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 15px 28px rgba(15, 63, 101, 0.34);
-    }
-
-    .hero {
-      padding: 78px 0 56px;
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 30px;
-      align-items: center;
-    }
-
-    .hero h1 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(2rem, 4.2vw, 3.6rem);
-      line-height: 1.12;
-      margin-bottom: 14px;
-    }
-
-    .hero p {
-      color: var(--muted);
-      max-width: 58ch;
-      margin-bottom: 28px;
-      font-size: 1.02rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .btn-outline {
-      text-decoration: none;
-      color: var(--primary-strong);
-      border: 1px solid var(--primary);
-      padding: 10px 18px;
-      border-radius: 999px;
-      font-weight: 700;
-      background: #fff;
-    }
-
-    .hero-card {
-      background: linear-gradient(160deg, #ffffff, #edf3f8);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 24px;
-      box-shadow: var(--shadow);
-      animation: floatIn 0.8s ease forwards;
-    }
-
-    .hero-card h3 {
-      font-size: 1.05rem;
-      margin-bottom: 14px;
-    }
-
-    .metric-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(110px, 1fr));
-      gap: 14px;
-    }
-
-    .metric {
-      background: var(--surface);
-      border-radius: 14px;
-      padding: 14px;
-      border: 1px solid var(--border);
-    }
-
-    .metric strong {
-      font-size: 1.25rem;
-      display: block;
-      margin-bottom: 3px;
-      color: var(--primary-strong);
-    }
-
-    .section {
-      padding: 50px 0;
-    }
-
-    .section h2 {
-      font-size: clamp(1.45rem, 3vw, 2.3rem);
-      margin-bottom: 16px;
-      font-family: "Playfair Display", serif;
-    }
-
-    .section-intro {
-      color: var(--muted);
-      max-width: 70ch;
-      margin-bottom: 24px;
-    }
-
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .value-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 20px;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .value-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 32px rgba(23, 33, 43, 0.1);
-    }
-
-    .value-card h3 {
-      margin-bottom: 8px;
-      font-size: 1.05rem;
-      color: var(--primary-strong);
-    }
-
-    .value-card p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .showcase {
-      background: linear-gradient(120deg, #10293d, #1a3f5f);
-      color: #f7fbff;
-      border-radius: 24px;
-      padding: 34px;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 20px;
-      align-items: center;
-      margin-top: 14px;
-    }
-
-    .showcase p {
-      color: #d4e2ef;
-    }
-
-    .showcase .cta-btn {
-      background: linear-gradient(135deg, var(--accent), #ad7a33);
-      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.28);
-    }
-
-    footer {
-      padding: 36px 0 42px;
-      color: #6b7680;
-      font-size: 0.93rem;
-    }
-
-    .fade-up {
-      opacity: 0;
-      transform: translateY(16px);
-      animation: fadeUp 0.75s ease forwards;
-    }
-
-    .fade-up.d2 { animation-delay: 0.15s; }
-    .fade-up.d3 { animation-delay: 0.3s; }
-
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes floatIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px) scale(0.98);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
-
-    @media (max-width: 940px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-
-      .values-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .showcase {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 620px) {
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .values-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding-top: 52px;
-      }
+    .gold-ring { box-shadow: 0 0 0 2px rgba(245, 194, 107, 0.55); }
+    .hidden-safe { display: none !important; }
+    .zig:nth-child(even) { transform: translateY(20px); }
+    @media (max-width: 768px) {
+      .zig:nth-child(even) { transform: none; }
     }
   </style>
 </head>
-<body>
-  <header>
-    <div class="wrap nav">
-      <div class="brand">
-        <span class="brand-dot" aria-hidden="true"></span>
-        <?php echo htmlspecialchars($companyName); ?>
-      </div>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#values">Values</a>
-        <a href="#impact">Impact</a>
-        <a class="cta-btn" href="#contact">Contact Us</a>
-        <div class="auth-links" aria-label="Authentication">
-          <a class="auth-btn signin-btn" href="#signin">Sign In</a>
-          <a class="auth-btn signup-btn" href="#signup">Sign Up</a>
-        </div>
-      </nav>
+<body class="bg-gradient-to-br from-indigo-900 via-purple-800 to-indigo-900 text-white antialiased selection:bg-amber-300 selection:text-indigo-950">
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-indigo-950/70 backdrop-blur">
+    <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3">
+      <a href="#" class="flex items-center gap-3">
+        <img src="https://www.bigfootdigital.co.uk/how-to-optimise-images" alt="logo fitmat" class="h-10 w-10 rounded-full object-cover ring-2 ring-amber-300/70" />
+        <span class="font-heading text-lg font-extrabold tracking-tight">FitMat Herbal</span>
+      </a>
+      <a href="[CTA]" class="rounded-full bg-amber-300 px-5 py-2 text-sm font-extrabold text-indigo-950 transition hover:scale-[1.03]">Dapatkan Sekarang</a>
     </div>
   </header>
 
   <main>
-    <section class="wrap hero" id="about">
-      <div>
-        <p class="fade-up" style="font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--primary); font-size:0.8rem;">Built for long-term trust</p>
-        <h1 class="fade-up d2">We help companies scale with confidence, clarity, and measurable outcomes.</h1>
-        <p class="fade-up d3"><?php echo htmlspecialchars($tagline); ?> We partner with leadership teams to modernize operations, strengthen customer experience, and drive sustained growth through practical execution.</p>
-        <div class="hero-actions fade-up d3">
-          <a class="cta-btn" href="#contact">Start a Conversation</a>
-          <a class="btn-outline" href="#values">See Our Values</a>
-        </div>
-      </div>
-
-      <aside class="hero-card" aria-label="Key company metrics">
-        <h3>What clients value most</h3>
-        <div class="metric-grid">
-          <div class="metric">
-            <strong>98%</strong>
-            <span>Client satisfaction score</span>
-          </div>
-          <div class="metric">
-            <strong>12+</strong>
-            <span>Years industry expertise</span>
-          </div>
-          <div class="metric">
-            <strong>40%</strong>
-            <span>Average process efficiency gain</span>
-          </div>
-          <div class="metric">
-            <strong>24/7</strong>
-            <span>Strategic support readiness</span>
-          </div>
-        </div>
-      </aside>
-    </section>
-
-    <section class="wrap section" id="values">
-      <h2>Company Values That Guide Every Decision</h2>
-      <p class="section-intro">Our culture is built on accountability, craftsmanship, and meaningful impact. These principles shape how we design solutions, communicate with stakeholders, and deliver results at scale.</p>
-      <div class="values-grid">
-        <article class="value-card">
-          <h3>Integrity in Action</h3>
-          <p>We commit to transparent communication and realistic planning so every partnership begins with trust and stays grounded in truth.</p>
-        </article>
-        <article class="value-card">
-          <h3>Excellence by Design</h3>
-          <p>From strategy to implementation, we maintain high standards and build systems that perform reliably in real-world conditions.</p>
-        </article>
-        <article class="value-card">
-          <h3>Customer-Centered Growth</h3>
-          <p>We focus on outcomes that matter to customers and teams, ensuring growth is sustainable, measurable, and aligned with purpose.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="wrap section" id="impact">
-      <div class="showcase">
+    <section id="hero" class="relative overflow-hidden">
+      <div class="mx-auto grid w-full max-w-6xl gap-8 px-4 py-16 md:grid-cols-2 md:py-20">
         <div>
-          <h2 style="margin-bottom:10px;">Ready to elevate your company presence?</h2>
-          <p>Build a credible digital first impression that reflects your maturity, communicates your value, and turns interest into lasting customer relationships.</p>
+          <p class="mb-4 inline-flex items-center rounded-full border border-amber-300/40 bg-amber-300/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-amber-200">Formula premium wanita 24+ tahun</p>
+          <h1 class="font-heading text-4xl font-black leading-tight tracking-tight md:text-6xl">Kempiskan Perut Buncit Dalam 30 Hari Dengan Teh Herbal Yang Sedap, Selamat Dan Praktikal.</h1>
+          <p class="mt-5 max-w-xl text-base text-indigo-100 md:text-lg">Jika anda penat sembunyi perut setiap kali keluar rumah, FitMat bantu reset bentuk badan dengan rutin mudah 2 cawan sehari. Tiada perlu gym ekstrem, tiada diet menyiksa.</p>
+
+          <div class="mt-6 glass inline-flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-semibold text-amber-100">
+            <span class="text-xl">🔥</span>
+            <span><span id="liveView">127</span> orang sedang melihat tawaran ini sekarang</span>
+          </div>
+
+          <div class="mt-7 flex flex-wrap gap-3">
+            <a href="[CTA]" class="rounded-full bg-amber-300 px-6 py-3 text-sm font-extrabold text-indigo-950 shadow-soft transition hover:scale-[1.03]">Ya, Saya Mahu Badan Lebih Yakin</a>
+            <a href="#harga" class="rounded-full border border-white/30 px-6 py-3 text-sm font-bold text-white transition hover:bg-white/10">Lihat Harga Istimewa</a>
+          </div>
+
+          <div class="mt-6 text-sm text-indigo-100">USP: Pelan transformasi 30 hari | Kelebihan tambahan: Jaminan 7 hari</div>
         </div>
-        <a class="cta-btn" href="#contact">Book a Strategy Call</a>
+
+        <div class="glass rounded-3xl p-6 shadow-soft">
+          <h2 class="font-heading text-2xl font-extrabold">Bayangkan 30 Hari Dari Sekarang...</h2>
+          <p class="mt-3 italic text-indigo-100">"Anda bangun pagi, zip seluar lebih longgar, muka lebih segar, dan keyakinan anda naik mendadak bila cermin tak lagi jadi musuh."</p>
+          <div class="mt-6 rounded-2xl bg-white/10 p-5">
+            <p class="text-sm font-semibold text-amber-200">Kenapa ramai wanita pilih FitMat?</p>
+            <ul class="mt-3 space-y-2 text-sm text-indigo-100">
+              <li>• Rasa teh herbal premium, senang konsisten setiap hari.</li>
+              <li>• Menyokong metabolisme dan kurangkan rasa "bloated".</li>
+              <li>• Sesuai untuk rutin kerja sibuk, ibu muda, dan beginner.</li>
+            </ul>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <section class="bg-indigo-50 px-4 py-12 text-indigo-950">
+      <div class="mx-auto max-w-5xl rounded-3xl border border-indigo-100 bg-white p-8 shadow-soft">
+        <p class="text-center text-lg italic md:text-2xl">"Anda tak perlukan motivasi sementara. Anda perlukan sistem yang buat hasil jadi kebiasaan."</p>
+      </div>
+    </section>
+
+    <section class="mx-auto w-full max-w-6xl px-4 py-16">
+      <h2 class="font-heading text-3xl font-black tracking-tight md:text-5xl">Masalah Sebenar Yang Buat Perut Makin Buncit</h2>
+      <div class="mt-8 grid gap-5 md:grid-cols-3">
+        <article class="zig glass rounded-2xl p-6">
+          <p class="text-2xl">⚠️</p>
+          <h3 class="mt-3 font-heading text-xl font-extrabold">Metabolisme Menurun</h3>
+          <p class="mt-2 text-sm text-indigo-100">Umur meningkat, badan simpan lemak lebih cepat walaupun makan tak banyak.</p>
+        </article>
+        <article class="zig glass rounded-2xl p-6">
+          <p class="text-2xl">⚠️</p>
+          <h3 class="mt-3 font-heading text-xl font-extrabold">Rutin Tak Konsisten</h3>
+          <p class="mt-2 text-sm text-indigo-100">Pelan susah ikut buat anda berhenti sebelum nampak perubahan sebenar.</p>
+        </article>
+        <article class="zig glass rounded-2xl p-6">
+          <p class="text-2xl">⚠️</p>
+          <h3 class="mt-3 font-heading text-xl font-extrabold">Kesan Emosi</h3>
+          <p class="mt-2 text-sm text-indigo-100">Kurang keyakinan diri ganggu gaya, mood, dan cara anda tampil di depan orang.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="mx-auto w-full max-w-6xl px-4 py-16">
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="glass rounded-3xl p-7">
+          <h2 class="font-heading text-3xl font-black md:text-4xl">Solusi: Protokol Teh Herbal 30 Hari</h2>
+          <p class="mt-4 text-indigo-100">FitMat direka untuk bantu wanita 24+ kurangkan perut buncit secara progresif tanpa ubah hidup secara ekstrem. Anda hanya ikut jadual mudah pagi dan malam.</p>
+          <ul class="mt-5 space-y-2 text-sm text-indigo-100">
+            <li>• Formula herba terpilih untuk rasa ringan selepas makan.</li>
+            <li>• Pelan tindakan harian yang jelas, bukan cuba-cuba.</li>
+            <li>• Fokus pada hasil visual dan rasa badan yang lebih selesa.</li>
+          </ul>
+        </div>
+        <div class="rounded-3xl border border-amber-300/40 bg-gradient-to-br from-amber-300/20 to-transparent p-7">
+          <h3 class="font-heading text-2xl font-extrabold text-amber-100">Kelebihan 7 Hari Pertama</h3>
+          <p class="mt-3 text-sm text-indigo-100">Majoriti pengguna mula rasa kurang bloated, lebih ringan, dan lebih yakin pakai baju kegemaran seawal minggu pertama bila ikut rutin dengan betul.</p>
+          <div class="mt-5 rounded-2xl bg-indigo-950/50 p-4 text-sm text-amber-100">Hasil individu berbeza, tetapi konsistensi + sistem FitMat = perubahan yang realistik.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto w-full max-w-6xl px-4 py-16">
+      <h2 class="font-heading text-3xl font-black tracking-tight md:text-5xl">Apa Yang Anda Dapat</h2>
+      <div class="mt-8 grid gap-4 md:grid-cols-3">
+        <article class="glass rounded-2xl p-6">
+          <svg viewBox="0 0 24 24" class="h-8 w-8 text-amber-300" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M3 12h18"/></svg>
+          <h3 class="mt-3 font-heading text-xl font-extrabold">Rutin Mudah</h3>
+          <p class="mt-2 text-sm text-indigo-100">2 cawan sehari, sesuai untuk jadual padat tanpa tekanan.</p>
+        </article>
+        <article class="glass rounded-2xl p-6">
+          <svg viewBox="0 0 24 24" class="h-8 w-8 text-amber-300" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12l5 5L20 6"/></svg>
+          <h3 class="mt-3 font-heading text-xl font-extrabold">Track Perubahan</h3>
+          <p class="mt-2 text-sm text-indigo-100">Checklist harian supaya anda nampak progres dengan jelas.</p>
+        </article>
+        <article class="glass rounded-2xl p-6">
+          <svg viewBox="0 0 24 24" class="h-8 w-8 text-amber-300" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <h3 class="mt-3 font-heading text-xl font-extrabold">Rasa Premium</h3>
+          <p class="mt-2 text-sm text-indigo-100">Teh herbal sedap bantu anda kekal konsisten hingga nampak hasil.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="mx-auto w-full max-w-6xl px-4 py-16">
+      <div class="glass rounded-3xl p-8 text-center">
+        <h2 class="font-heading text-3xl font-black md:text-4xl">Siapa Saya</h2>
+        <div class="mx-auto mt-6 h-28 w-28 overflow-hidden rounded-full border-4 border-amber-300">
+          <div class="flex h-full w-full items-center justify-center bg-indigo-950 text-3xl">👩</div>
+        </div>
+        <p class="mx-auto mt-4 max-w-3xl text-indigo-100">Saya Hana, coach transformasi wanita. Fokus saya bukan sekadar turunkan nombor di timbangan, tetapi bantu anda dapat semula keyakinan diri melalui sistem yang boleh anda ikut setiap hari.</p>
+        <p class="mt-4 font-heading text-2xl text-amber-200">Hana FitMat</p>
+      </div>
+    </section>
+
+    <section class="mx-auto w-full max-w-6xl px-4 py-16">
+      <h2 class="font-heading text-3xl font-black tracking-tight md:text-5xl">Framework 30 Hari FitMat</h2>
+      <div class="mt-8 space-y-6">
+        <div>
+          <div class="mb-2 flex justify-between text-sm text-indigo-100"><span>Hari 1-7: Adaptasi</span><span>25%</span></div>
+          <div class="h-3 overflow-hidden rounded-full bg-white/15"><div class="timeline-bar h-full w-0 rounded-full bg-amber-300"></div></div>
+        </div>
+        <div>
+          <div class="mb-2 flex justify-between text-sm text-indigo-100"><span>Hari 8-20: Momentum</span><span>65%</span></div>
+          <div class="h-3 overflow-hidden rounded-full bg-white/15"><div class="timeline-bar h-full w-0 rounded-full bg-amber-300"></div></div>
+        </div>
+        <div>
+          <div class="mb-2 flex justify-between text-sm text-indigo-100"><span>Hari 21-30: Pengukuhan</span><span>100%</span></div>
+          <div class="h-3 overflow-hidden rounded-full bg-white/15"><div class="timeline-bar h-full w-0 rounded-full bg-amber-300"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto w-full max-w-6xl px-4 py-16">
+      <h2 class="font-heading text-3xl font-black tracking-tight md:text-5xl">Bukti Awal Pengguna</h2>
+      <div class="relative mt-8 overflow-hidden rounded-3xl border border-white/15 bg-white/5 p-6">
+        <div id="testimonialTrack" class="flex transition-transform duration-500">
+          <article class="w-full shrink-0 px-2">
+            <div class="glass rounded-2xl p-6">
+              <p class="text-amber-200">"Minggu pertama dah rasa perut kurang tegang. Saya lebih yakin pakai blouse kerja."</p>
+              <p class="mt-4 text-sm font-semibold">Nadia, 27, Shah Alam</p>
+            </div>
+          </article>
+          <article class="w-full shrink-0 px-2">
+            <div class="glass rounded-2xl p-6">
+              <p class="text-amber-200">"Suka sebab senang ikut. Tak perlu diet pelik, tapi tetap nampak perubahan."</p>
+              <p class="mt-4 text-sm font-semibold">Aina, 31, Johor Bahru</p>
+            </div>
+          </article>
+          <article class="w-full shrink-0 px-2">
+            <div class="glass rounded-2xl p-6">
+              <p class="text-amber-200">"Badan rasa ringan dan keyakinan diri naik bila jumpa klien."</p>
+              <p class="mt-4 text-sm font-semibold">Fatin, 29, KL</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto grid w-full max-w-6xl gap-5 px-4 py-16 md:grid-cols-2">
+      <div class="rounded-3xl border border-red-300/40 bg-gradient-to-br from-red-950 to-black p-8">
+        <h2 class="font-heading text-3xl font-black">Jika Biarkan...</h2>
+        <p class="mt-4 text-red-100">Perut buncit berlarutan, keyakinan makin turun, dan anda terus rasa terhad dalam gaya hidup harian.</p>
+      </div>
+      <div class="rounded-3xl border border-emerald-200/50 bg-gradient-to-br from-emerald-100 to-white p-8 text-indigo-950">
+        <h2 class="font-heading text-3xl font-black">Jika Bertindak Hari Ini...</h2>
+        <p class="mt-4">Anda bina tubuh lebih kemas, tampil lebih yakin, dan rasa diri anda kembali bernilai di mata sendiri.</p>
+      </div>
+    </section>
+
+    <section class="mx-auto w-full max-w-6xl px-4 py-16">
+      <div class="rounded-3xl border border-red-400/50 bg-gradient-to-r from-red-900 via-rose-900 to-red-900 p-8 text-center shadow-soft">
+        <h2 class="font-heading text-3xl font-black md:text-4xl">Anda Akan Rugi Besar Jika Tutup Laman Ini Sekarang</h2>
+        <p class="mx-auto mt-3 max-w-3xl text-red-100">Harga promosi boleh tamat bila-bila masa. Tawaran ini direka khas untuk wanita yang mahu hasil realistik dalam 30 hari, bukan janji kosong.</p>
+        <div class="mt-5 inline-flex items-center gap-3 rounded-full bg-black/20 px-5 py-3 text-sm font-bold text-amber-200">
+          Tawaran tamat dalam: <span id="countdown" class="font-heading text-lg">14:59</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="harga" class="mx-auto w-full max-w-6xl px-4 py-16">
+      <h2 class="text-center font-heading text-3xl font-black tracking-tight md:text-5xl">Pakej Harga FitMat</h2>
+      <div class="mx-auto mt-8 max-w-2xl rounded-3xl border border-amber-300/50 bg-white/10 p-8 text-center shadow-soft gold-ring">
+        <p class="text-sm font-semibold uppercase tracking-[0.12em] text-amber-200">Price Anchoring</p>
+        <p class="mt-4 text-indigo-100">Nilai sebenar pelan + sokongan: <span class="line-through">RM299</span></p>
+        <p class="mt-1 text-indigo-100">Harga biasa di pasaran: <span class="line-through">RM249</span></p>
+        <p class="mt-5 font-heading text-5xl font-black text-amber-300">RM180</p>
+        <p class="mt-2 text-sm text-indigo-100">Bayaran sekali untuk akses pelan 30 hari</p>
+        <a href="[CTA]" class="mt-6 inline-block rounded-full bg-amber-300 px-8 py-3 text-sm font-extrabold text-indigo-950 transition hover:scale-[1.03]">Claim Harga RM180 Sekarang</a>
+      </div>
+    </section>
+
+    <section class="mx-auto w-full max-w-6xl px-4 py-16">
+      <div class="rounded-3xl border-2 border-dashed border-amber-300 bg-amber-200/10 p-8">
+        <div class="inline-flex rounded-full bg-amber-300 px-3 py-1 text-xs font-black text-indigo-950">PERCUMA</div>
+        <h2 class="mt-4 font-heading text-3xl font-black md:text-4xl">Bonus Value Stacking: Freegift</h2>
+        <div class="mt-5 grid gap-4 md:grid-cols-3">
+          <div class="rounded-2xl bg-white/10 p-4">
+            <p class="font-bold text-amber-100">Bonus 1</p>
+            <p class="text-sm text-indigo-100">Checklist 30 Hari (nilai RM39)</p>
+          </div>
+          <div class="rounded-2xl bg-white/10 p-4">
+            <p class="font-bold text-amber-100">Bonus 2</p>
+            <p class="text-sm text-indigo-100">Panduan menu ringkas (nilai RM49)</p>
+          </div>
+          <div class="rounded-2xl bg-white/10 p-4">
+            <p class="font-bold text-amber-100">Bonus 3</p>
+            <p class="text-sm text-indigo-100">Skrip motivasi 7 hari (nilai RM59)</p>
+          </div>
+        </div>
+        <p class="mt-4 text-sm text-indigo-100">Jumlah bonus bernilai RM147 diberi percuma bila anda bertindak hari ini.</p>
+      </div>
+    </section>
+
+    <section class="mx-auto w-full max-w-4xl px-4 py-16 text-center">
+      <div class="glass rounded-3xl p-8">
+        <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-400/25 text-3xl">🛡️</div>
+        <h2 class="mt-4 font-heading text-3xl font-black">Jaminan 7 Hari</h2>
+        <p class="mx-auto mt-3 max-w-2xl text-indigo-100">Cuba FitMat dengan yakin. Jika anda rasa ia tidak sesuai dalam 7 hari pertama, kami bantu proses tuntutan mengikut terma pembelian.</p>
+      </div>
+    </section>
+
+    <section class="mx-auto w-full max-w-4xl px-4 py-16">
+      <h2 class="text-center font-heading text-3xl font-black md:text-5xl">Soalan Lazim</h2>
+      <div class="mt-8 space-y-3">
+        <details class="group rounded-2xl border border-white/20 bg-white/5 p-5">
+          <summary class="cursor-pointer list-none font-semibold">Adakah sesuai untuk beginner?</summary>
+          <p class="mt-3 text-sm text-indigo-100">Ya. Rutin ini dibina khusus untuk wanita sibuk yang perlukan langkah ringkas dan jelas.</p>
+        </details>
+        <details class="group rounded-2xl border border-white/20 bg-white/5 p-5">
+          <summary class="cursor-pointer list-none font-semibold">Berapa cepat nampak hasil?</summary>
+          <p class="mt-3 text-sm text-indigo-100">Ramai mula rasa perubahan pada minggu pertama. Hasil visual biasanya lebih jelas menjelang hujung 30 hari dengan konsisten.</p>
+        </details>
+        <details class="group rounded-2xl border border-white/20 bg-white/5 p-5">
+          <summary class="cursor-pointer list-none font-semibold">Bagaimana cara minum?</summary>
+          <p class="mt-3 text-sm text-indigo-100">Ikut panduan dalam pakej: 2 kali sehari, pagi dan malam, bersama rutin asas yang diberi.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="mx-auto w-full max-w-6xl px-4 pb-24 pt-8 text-center">
+      <h2 class="font-heading text-3xl font-black md:text-5xl">Jangan Tunggu Badan Ideal Datang Sendiri</h2>
+      <p class="mx-auto mt-3 max-w-3xl text-indigo-100">Buat keputusan sekarang. Setiap hari anda tangguh, keyakinan anda dibayar dengan rasa menyesal.</p>
+      <a href="[CTA]" class="mt-6 inline-block rounded-full bg-amber-300 px-8 py-3 font-extrabold text-indigo-950 transition hover:scale-[1.03]">Saya Mahu Mulakan Transformasi</a>
     </section>
   </main>
 
-  <footer class="wrap" id="contact">
-    <p>&copy; <?php echo $year; ?> <?php echo htmlspecialchars($companyName); ?>. All rights reserved.</p>
+  <footer class="border-t border-white/10 bg-indigo-950/70 py-8 text-center text-sm text-indigo-200">
+    <p>&copy; 2026 FitMat Herbal. Hak cipta terpelihara.</p>
   </footer>
+
+  <div id="stickyBar" class="hidden-safe fixed z-50 w-full border border-amber-300/40 bg-indigo-950/95 px-4 py-3 shadow-soft md:top-0 md:border-x-0 md:border-b md:border-t-0 md:backdrop-blur sm:bottom-0 md:bottom-auto">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-3">
+      <p class="text-xs font-semibold text-indigo-100 md:text-sm">FitMat 30 Hari hanya <span class="font-black text-amber-300">RM180</span> + Bonus Freegift</p>
+      <a href="[CTA]" class="shrink-0 rounded-full bg-amber-300 px-4 py-2 text-xs font-extrabold text-indigo-950 md:text-sm">Beli Sekarang</a>
+    </div>
+  </div>
+
+  <div id="socialProof" class="fixed right-4 top-4 z-50 hidden max-w-xs rounded-2xl border border-white/20 bg-indigo-950/90 p-4 text-sm shadow-soft backdrop-blur">
+    <p class="font-bold text-amber-200">Pembelian Baru</p>
+    <p id="socialProofText" class="mt-1 text-indigo-100">Ali dari Johor baru membeli...</p>
+  </div>
+
+  <div id="exitPopup" class="hidden fixed inset-0 z-[60] items-center justify-center bg-black/70 p-4">
+    <div class="w-full max-w-md rounded-3xl border border-amber-300/40 bg-gradient-to-br from-indigo-900 to-purple-900 p-6 text-center shadow-soft">
+      <p class="text-xs font-bold uppercase tracking-[0.12em] text-amber-200">Tawaran Terakhir</p>
+      <h3 class="mt-2 font-heading text-3xl font-black">Tunggu Dulu...</h3>
+      <p class="mt-3 text-sm text-indigo-100">Sebelum anda keluar, claim diskaun khas sekarang dan kekalkan harga RM180 + bonus percuma.</p>
+      <div class="mt-5 flex justify-center gap-3">
+        <a href="[CTA]" class="rounded-full bg-amber-300 px-5 py-2 text-sm font-extrabold text-indigo-950">Ya, Claim Sekarang</a>
+        <button id="closeExit" class="rounded-full border border-white/30 px-5 py-2 text-sm font-semibold text-white">Nanti Dulu</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const liveViewEl = document.getElementById('liveView');
+      let liveCount = 124 + Math.floor(Math.random() * 20);
+      liveViewEl.textContent = String(liveCount);
+      setInterval(function () {
+        const delta = Math.floor(Math.random() * 7) - 3;
+        liveCount = Math.max(95, Math.min(199, liveCount + delta));
+        liveViewEl.textContent = String(liveCount);
+      }, 2200);
+
+      const stickyBar = document.getElementById('stickyBar');
+      const hero = document.getElementById('hero');
+      function handleStickyBar() {
+        const heroBottom = hero.getBoundingClientRect().bottom;
+        if (heroBottom < 0) {
+          stickyBar.classList.remove('hidden-safe');
+        } else {
+          stickyBar.classList.add('hidden-safe');
+        }
+      }
+      window.addEventListener('scroll', handleStickyBar, { passive: true });
+      handleStickyBar();
+
+      const socialProof = document.getElementById('socialProof');
+      const socialProofText = document.getElementById('socialProofText');
+      const names = ['Ali', 'Farah', 'Mira', 'Siti', 'Nora', 'Hani', 'Aisyah'];
+      const places = ['Johor', 'Shah Alam', 'Kuching', 'KL', 'Penang', 'Melaka', 'Ipoh'];
+      function showSocialProof() {
+        const name = names[Math.floor(Math.random() * names.length)];
+        const place = places[Math.floor(Math.random() * places.length)];
+        socialProofText.textContent = name + ' dari ' + place + ' baru membeli...';
+        socialProof.classList.remove('hidden');
+        setTimeout(function () { socialProof.classList.add('hidden'); }, 3200);
+      }
+      setTimeout(showSocialProof, 1800);
+      setInterval(showSocialProof, 7200);
+
+      const countdownEl = document.getElementById('countdown');
+      let totalSeconds = 14 * 60 + 59;
+      function tickCountdown() {
+        const minutes = Math.floor(totalSeconds / 60);
+        const seconds = totalSeconds % 60;
+        countdownEl.textContent = String(minutes).padStart(2, '0') + ':' + String(seconds).padStart(2, '0');
+        if (totalSeconds > 0) {
+          totalSeconds -= 1;
+        }
+      }
+      tickCountdown();
+      setInterval(tickCountdown, 1000);
+
+      const bars = document.querySelectorAll('.timeline-bar');
+      const widths = ['25%', '65%', '100%'];
+      setTimeout(function () {
+        bars.forEach(function (bar, i) {
+          bar.style.transition = 'width 1200ms ease';
+          bar.style.width = widths[i];
+        });
+      }, 400);
+
+      const track = document.getElementById('testimonialTrack');
+      let slide = 0;
+      setInterval(function () {
+        slide = (slide + 1) % 3;
+        track.style.transform = 'translateX(-' + (slide * 100) + '%)';
+      }, 3500);
+
+      const exitPopup = document.getElementById('exitPopup');
+      const closeExit = document.getElementById('closeExit');
+      let exitShown = false;
+      document.addEventListener('mouseleave', function (event) {
+        if (event.clientY <= 0 && !exitShown) {
+          exitShown = true;
+          exitPopup.classList.remove('hidden');
+          exitPopup.classList.add('flex');
+        }
+      });
+      closeExit.addEventListener('click', function () {
+        exitPopup.classList.add('hidden');
+        exitPopup.classList.remove('flex');
+      });
+    })();
+  </script>
 </body>
 </html>
-
-
